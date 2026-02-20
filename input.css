@@ -1,0 +1,715 @@
+/* @import "tailwindcss"; */
+
+:root {
+  --primary: #5b3be1;
+  --primary-hover: #4a2ec2;
+  --secondary: #f8f7ff;
+  --popup-btn: #9D9DFF;
+  --card-hover: #8b5cf6;
+  --white: #ffffff;
+  --accent: #a78bfa;
+  --text-main: #111827;
+  --text-secondary: #4D4D4D;
+  --text-muted: #4b5563;
+  --darkblack: #000000;
+  --border_1: rgb(180 166 235 / 54%);
+  --border_2: #D2D2D2;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-glass-2: rgba(255, 255, 255, 0.45);
+  --card-shadow-2: 0px 4px 6px rgba(134, 103, 255, 0.91);
+  --text-gradient: linear-gradient(
+    180deg,
+    rgba(221, 221, 221, 0.7) 0%,
+    rgb(58 10 243) 100%
+  );
+  --slider-gray: #F5F4F8;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* color: var(--darkblack); */
+  /* margin: 0; */
+}
+p {
+  /* margin: 0; */
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background-color: var(--white);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0 !important;
+}
+
+.gradient-mesh {
+  background-color: var(--white);
+  background-image:
+    radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 0) 0,
+      hsla(253, 16%, 7%, 0) 50%
+    ),
+    radial-gradient(
+      at 50% 0%,
+      hsla(255, 73%, 94%, 1) 0,
+      hsla(255, 73%, 94%, 0) 50%
+    ),
+    radial-gradient(
+      at 100% 0%,
+      hsla(255, 100%, 98%, 1) 0,
+      hsla(255, 100%, 98%, 0) 50%
+    );
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(91, 59, 225, 0.3);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* Updated Framework Styles to match Figma */
+.framework-card {
+  /* background: linear-gradient(
+    180deg,
+    rgba(91, 59, 225, 0.05) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); */
+  border-left: 1px solid rgba(91, 59, 225, 0.1);
+  position: relative;
+  background: var(--bg-glass-2);
+  backdrop-filter: blur(17.5px);
+}
+
+.framework-number {
+ background: linear-gradient(180deg, rgba(221, 221, 221, 0.7) 0%, rgba(134, 103, 255, 0.7) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+
+.tab-active {
+  background-color: var(--primary);
+  color: var(--white) !important;
+}
+
+/* Glassmorphism */
+/* .glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+} */
+nav {
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border 0.3s ease;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+}
+
+nav.scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  /* border-bottom: 1px solid rgba(231, 231, 231, 0.3); */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  ring: 2px;
+  ring-color: var(--accent);
+}
+
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.hero-circle-1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: rgba(82, 52, 201, 0.32);
+  filter: blur(156.6px);
+}
+
+.hero-circle-2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(82, 52, 201, 0.32);
+  filter: blur(156.6px);
+  bottom: -150px;
+  right: -100px;
+}
+
+.hero-section::before {
+  z-index: -1;
+  position: absolute;
+  top: 110%;
+  content: "";
+  width: 1300px;
+  height: 1300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(176, 159, 243, 0.22) 0%,
+    rgba(143, 119, 238, 0.19) 9.11%,
+    rgba(159, 138, 242, 0) 23.3%,
+    rgba(161, 143, 230, 0) 100%
+  );
+}
+
+.hero-section {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.hero-section::after {
+  position: absolute;
+  top: 110%;
+  content: "";
+  width: 1500px;
+  height: 1500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(176, 159, 243, 0.22) 0%,
+    rgba(143, 119, 238, 0.19) 9.11%,
+    rgba(159, 138, 242, 0) 23.3%,
+    rgba(161, 143, 230, 0) 100%
+  );
+}
+.group.texch-box:hover h3 {
+  color: white;
+}
+.framework-section::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: calc(50% - 450px / 2);
+  top: calc(50% - 450px / 2);
+
+  background: rgba(82, 52, 201, 0.32);
+  filter: blur(156.6px);
+  z-index: 0;
+}
+.framework-bg-1 {
+  position: absolute;
+  /* width: 450px;
+  height: 450px; */
+  left: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+.framework-bg-2 {
+  position: absolute;
+  /* width: 450px;
+  height: 450px; */
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+}
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.logoslider .swiper-slide  .logoslider-box {
+background: var( --slider-gray);
+border-radius: 12px;
+
+}
+.logoslider .swiper-slide  .logoslider-box img{
+height: 80px;
+object-fit: contain;
+
+}
+
+.swiper-slide-thumb-active .tab-btn  {
+    background-color: var(--primary);
+    color: var(--white) !important;
+    position: relative;
+  
+}
+/* .swiper-slide-thumb-active .tab-btn  span {
+    width: 70%;
+    height: 120px;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    clip-path: polygon(50% 53%, 0 100%, 100% 100%);
+    clip-path: polygon(50% 22%, 0 0, 100% 0);
+    position: absolute;
+    left: 50%;
+    bottom: -122px;
+    transform: translate( -50%, 0);
+} */
+.swiper-slide-thumb-active .tab-btn::before {
+  content: '';
+    width: 70%;
+    height: 120px;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    clip-path: polygon(50% 53%, 0 100%, 100% 100%);
+    clip-path: polygon(50% 22%, 0 0, 100% 0);
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    transform: translate( -50%, 0);
+}
+
+ .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .tabslider {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 1;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+
+    .popup-section .popup-bg-overlay{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    }
+    /* Button to open popup */
+  .open-popup-btn {
+    padding: 20px;
+    background: var(--popup-btn);
+    color: white;
+    border: none;
+    border-radius: 81px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100px;
+    transition: transform 0.2s;
+    height: 100px;
+    /* position: relative;
+    z-index: 999; */
+}
+  .open-popup-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 99;
+}
+  .popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Popup content */
+  .popup {
+    background: #111;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+  }
+  .popup-overlay.active .popup {
+    transform: scale(1);
+  }
+
+  /* Close symbol */
+  .close-symbol {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    z-index: 999;
+  }
+  .close-symbol:hover {
+    color: var(--white);
+  }
+
+  /* Video styling */
+  .popup video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .mySwiper2 {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+ 
+   .menu-transition {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* When active, open the container */
+.menu-transition.active {
+  max-height: 1000px; /* large enough to show full content */
+  opacity: 1;
+}
+.counter-box {
+    display: inline-block;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.percent {
+    font-size: 3rem;
+    color: #111;
+}
+
+.label {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.has-submenu {
+  position: relative;
+}
+.has-submenu .submenu{
+ min-width: 260px;
+    height: auto;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    padding: 12px 0;
+    transition: 0.3s;
+    border-radius: 0 0 10px 10px;
+background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transform: scaleY(0);
+    clip: rect(0px, 200vw, 0, 0px);
+    transform: translateZ(0);
+}
+
+li.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    clip: rect(0px, 100vw, 200vh, -30px);
+    transition: clip 0.6s linear, opacity 0.4s linear;
+}
+li.has-third-lev {
+    position: relative;
+}
+li.has-submenu:hover .submenu li.has-third-lev:hover img{
+  filter: brightness(190.5) invert(1);
+}
+li.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    clip: rect(0px, 100vw, 200vh, -30px);
+    transition: clip 0.6s linear, opacity 0.4s linear;
+}
+li.has-third-lev .submenu {
+    position: absolute;
+    right: 0;
+    top: 15px !important;
+    left: 100%;
+    opacity: 0 !important;
+    transition: 0.3s !important;
+}
+ li.has-third-lev:hover .submenu {
+    top: -12px !important;
+    opacity: 1 !important;
+}
+li.has-submenu .submenu li a {
+    font-weight: 500;
+    padding: 5px 20px;
+    font-size: 14px;
+    display: block;
+    color: var(--darkblack);
+    margin: 0 10px;
+    border-radius: 3px;
+}
+li.has-submenu .submenu li a:hover {
+    color: var(--white) !important;
+    background: var(--accent);
+    margin-left: 15px;
+}
+.has-third-lev a{
+  display: flex!important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* responsive menu */
+ .close-btn {
+    position: absolute;
+    right: -15px;
+    width: 35px;
+    height: 35px;
+    background: var(--primary);
+    border-radius: 50px;
+    min-width: 35px;
+}
+      .sidebar {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 300px;
+  height: 100%;
+  /* background: #111; */
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+      transition: all 0.5s ease-out;
+  z-index: 99999;
+  
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+.mobile-menu {
+  margin-top: 20px;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-menu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    color: #5034d2;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Override desktop submenu behavior */
+.mobile-menu .submenu {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  padding-left: 15px !important;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  
+}
+.mobile-menu  li.has-submenu .submenu li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    color: #5034d2;
+    font-size: 15px;
+    font-weight: 500;
+}
+.mobile-menu li.open > .submenu {
+  /* max-height: 500px;  */
+}
+.mobile-menu .has-submenu,
+.mobile-menu .has-third-lev {
+  position: static;
+}
+
+/* Reset desktop submenu completely */
+.mobile-menu .submenu {
+  all: unset;
+  display: block;
+  padding-left: 16px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* Open state */
+.mobile-menu li.open > .submenu {
+  max-height: 600px;
+}
+
+/* Links */
+.mobile-menu .submenu a {
+  padding: 10px;
+  font-size: 14px;
+  color: var(--white);
+}
+
+/* Arrow spacing */
+.mobile-menu .submenu-toggle {
+  width: 100%;
+}
+.mobile-menu .has-third-lev.open .submenu{
+    position: inherit;
+    opacity: 1 !important;
+}
+.mobile-menu  .has-third-lev  .submenu{
+    color: #5034d2;
+}
+
+.menu-btn img{
+      width: 20px;
+    filter: brightness(0) contrast(60) invert(90);
+}
+
+.mega-menu-animate {
+    transform-origin: 0 0;
+    transform: scaleY(0) translateZ(0);
+    clip: rect(0px, 200vw, 0px, 0px);
+    opacity: 0;
+    visibility: hidden;
+    transition: clip 0.6s linear, opacity 0.4s linear, transform 0.4s ease-out;
+    position: absolute;
+    top: 100%; /* Ensures it starts exactly at the bottom of the nav */
+    left: 0;
+    right: 0;
+}
+
+/* Hover state */
+.group:hover .mega-menu-animate {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    clip: rect(0px, 100vw, 200vh, -30px);
+}
+
+
+.glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 1);
+        }
