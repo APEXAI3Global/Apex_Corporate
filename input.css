@@ -12,6 +12,7 @@
   --text-secondary: #4D4D4D;
   --text-muted: #4b5563;
   --darkblack: #000000;
+  --mute-purple: #bdacff;
   --border_1: rgb(180 166 235 / 54%);
   --border_2: #D2D2D2;
   --bg-glass: rgba(255, 255, 255, 0.8);
@@ -219,7 +220,7 @@ textarea:focus {
   );
 }
 .group.texch-box:hover h3 {
-  color: white;
+  /* color: white; */
 }
 .framework-section::before {
   content: "";

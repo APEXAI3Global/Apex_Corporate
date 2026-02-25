@@ -7,6 +7,7 @@
       nav.classList.remove("scrolled");
     }
   });
+  
 
 var swiper = new Swiper(".logoslider", {
   loop: true,
