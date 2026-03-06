@@ -96,8 +96,9 @@ body {
 }
 /* Hero Section */
 .hero-section {
-  min-height: 100vh;
-  padding-top: 80px;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .rounded-blob {
@@ -112,12 +113,13 @@ body {
   position: relative;
   display: inline-block;
 }
-
 .hero-img img {
-  width: 320px;
-  border-radius: 30px;
-  position: relative;
-  z-index: 2;
+    width: 320px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    height: 420px;
+    object-fit: cover;
 }
 
 .hero-img::before {
@@ -523,6 +525,7 @@ border:none;
 padding:12px 25px;
 border-radius:30px;
 font-weight:600;
+color: var(--bg-white);
 }
 
 .arrow-btn{
