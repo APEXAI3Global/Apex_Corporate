@@ -11,7 +11,16 @@ html {
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
+.navbar  .navbar-toggler{
+    border: 1px solid #4e2be2;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #4e2be2;
 
+}
+.navbar .navbar-toggler i{
+  color: #4e2be2;
+}
 /* Logo */
 
 .navbar-brand {
@@ -763,26 +772,28 @@ display:inline-block;
 padding-bottom:15px;
 }
 
-.highlight-title::before{
-content:"";
-position:absolute;
-bottom:0;
-left:0;
-width:60px;
-height:4px;
-background:#7c3aed;
-border-radius:5px;
+.highlight-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background: #7c3aed;
+    border-radius: 5px;
+    transform: translate(-50%, 0px);
 }
 
 .highlight-title::after{
 content:"";
 position:absolute;
 bottom:0;
-left:65px;
+left:57%;
 width:20px;
 height:4px;
 background:#c084fc;
 border-radius:5px;
+transform: translate(-50%, 0px);
 }
 .highlight-title span {
   display: block;
