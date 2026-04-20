@@ -118,7 +118,7 @@ body {
   /* border-radius: 30px; */
   position: relative;
   z-index: 2;
-  /* height: 420px; */
+  height: 420px;
   object-fit: cover;
 }
 
@@ -322,9 +322,22 @@ border-radius: 25px;
   min-height: 70px;
   margin-bottom: 25px;
 }
+.strategice-box span.icon-part   {
+width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5538c7;
+    border-radius: 31px;
+    font-size: 12px;
+    color: #fff;
+}
 .strategice-box span i {
-    font-size: 25px;
-    padding-top: 10px;
+    font-size: 20px;
+    /* padding-top: 10px; */
 }
 
 .feature-sec {
@@ -874,7 +887,7 @@ z-index:-1;
   padding: 70px 0;
 
   /* Right side background image */
-  background: url("../images/static-bg.jpg") right center / cover no-repeat;
+  /* background: url("../images/static-bg.jpg") right center / cover no-repeat; */
 }
 
 /* Purple angled shape */
@@ -935,6 +948,9 @@ z-index:-1;
 .profile-card img {
   width: 100%;
   display: block;
+  height: 450px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* RIGHT CARD */
@@ -1050,11 +1066,28 @@ z-index:-1;
   .timeline-item {
     margin-bottom: 50px;
   }
+  .nabil-section::before {
+    opacity: 0.2;
+}
 }
 
 /* responsive */
 
 @media (max-width: 768px) {
+  .stats-box {
+    padding: 15px 20px;
+    gap: 10px;
+}
+  .hero-img img {
+    height: 100%;
+    
+}
+  .hero-section-new {
+    padding: 60px 0;
+}
+  .hero-title-new {
+    font-size: 32px;
+}
   .platform-item {
     flex-direction: row;
     gap: 15px;
