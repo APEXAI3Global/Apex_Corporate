@@ -8,7 +8,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const sidebar = document.querySelector('.sidebar');
 
+function opencanvas() {
+  sidebar.classList.add('active');
+}
+
+function closeSidebar() {
+  sidebar.classList.remove('active');
+}
+
+document.querySelectorAll('.submenu-toggle').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    btn.parentElement.classList.toggle('open');
+  });
+});
+
+sidebar.querySelectorAll('a:not(.submenu-toggle)').forEach(link => {
+  link.addEventListener('click', () => {
+    closeSidebar();
+  });
+});
 var swiper = new Swiper(".logoslider", {
   loop: true,
   centeredSlides: true,
