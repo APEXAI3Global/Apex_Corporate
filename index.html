@@ -1642,27 +1642,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const popup = document.getElementById("welcomePopup");
-
-            // Check if already accepted
-            if (localStorage.getItem("cookieConsent")) {
-                popup.style.display = "none";
-            }
-        });
-
-        function handleConsent() {
-            // Save flag in localStorage
-            localStorage.setItem("cookieConsent", "true");
-
-            // Hide popup
-            document.getElementById("welcomePopup").style.display = "none";
-        }
-    </script>
-    <script>
-     
-    </script>
+   
 
     <script src="assets/js/swiper-bundle.min.js"></script>
 

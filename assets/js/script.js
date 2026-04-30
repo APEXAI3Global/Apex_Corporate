@@ -31,6 +31,23 @@ sidebar.querySelectorAll('a:not(.submenu-toggle)').forEach(link => {
     closeSidebar();
   });
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+            const popup = document.getElementById("welcomePopup");
+
+            // Check if already accepted
+            if (localStorage.getItem("cookieConsent")) {
+                popup.style.display = "none";
+            }
+        });
+
+        function handleConsent() {
+            // Save flag in localStorage
+            localStorage.setItem("cookieConsent", "true");
+
+            // Hide popup
+            document.getElementById("welcomePopup").style.display = "none";
+        }
 var swiper = new Swiper(".logoslider", {
   loop: true,
   centeredSlides: true,
