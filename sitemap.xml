@@ -9,7 +9,88 @@
 
 <url>
   <loc>https://www.apexai3.com/</loc>
-  <lastmod>2026-06-08T06:02:40+00:00</lastmod>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/index.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/overview.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/providers.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/data-sources.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/model-training.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/model-catalog.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/playground.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/whitepapers.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/blogs.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/case-studies.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/brochures.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/organization.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/whitepapers-details.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/blog-details.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/case-study-details.html</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.apexai3.com/assets/images/file/apex_ai.pdf</loc>
+  <lastmod>2026-06-09T13:02:42+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
