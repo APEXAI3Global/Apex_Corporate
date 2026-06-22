@@ -891,7 +891,7 @@
         </div>
     </div>
 
-    <footer class="relative pt-20 pb-10 overflow-hidden bg-white border-t border-gray-100">
+      <!-- <footer class="relative pt-20 pb-10 overflow-hidden bg-white border-t border-gray-100">
         <div class="px-4 mx-auto max-w-7xl">
             <div class="relative z-10 grid grid-cols-1 gap-12 mb-16 md:grid-cols-2 lg:grid-cols-4">
                 <div>
@@ -931,13 +931,13 @@
                 <div>
                     <h4 class="mb-6 font-bold">Platform</h4>
                     <ul class="space-y-4 text-sm text-gray-500">
-                        <li><a href="overview.html" class="hover:text-[var(--primary)]"
-                                title="Overview">Overview</a></li>
+                        <li><a href="overview.html" class="hover:text-[var(--primary)]" title="Overview">Overview</a>
+                        </li>
                         <li><a href="providers.html" class="hover:text-[var(--primary)]" title="Providers">
                                 Providers
                             </a></li>
-                        <li><a href="data-sources.html" class="hover:text-[var(--primary)]"
-                                title="Data Sources">Data Sources</a></li>
+                        <li><a href="data-sources.html" class="hover:text-[var(--primary)]" title="Data Sources">Data
+                                Sources</a></li>
                         <li><a href="model-training.html" class="hover:text-[var(--primary)]" title="Model Training">
                                 Model Training</a></li>
                     </ul>
@@ -949,7 +949,7 @@
                             <a href="tel:+971529859044" class="hover:text-[var(--primary)] flex items-center gap-2">
                                 <img src="assets/images/fi-rr-phone-call.svg" alt="facebook" class="text-xl">(052)
                                 555-0112</a>
-                            </li>
+                        </li>
                         <li><a href="mailto:sales@apexai3.com"
                                 class="hover:text-[var(--primary)] flex items-center gap-2"> <img
                                     src="assets/images/fi-rr-envelopes.svg" alt="facebook" class="text-xl">
@@ -957,7 +957,7 @@
                         <li> <a href="https://maps.google.com/?q=4/1c Visaka Garden, Saravanampatty, Coimbatore, India 641035"
                                 target="_blank" class="hover:text-[var(--primary)] flex items-center gap-2"> <img
                                     src="assets/images/fi-rr-land-layer-location.svg" alt="facebook" class="text-xl">
-                               Al Mamzar - Deira - Dubai, UAE</a></li>
+                                Al Mamzar - Deira - Dubai, UAE</a></li>
                     </ul>
                 </div>
             </div>
@@ -977,7 +977,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="grid grid-cols-1 gap-12 pt-0 ">
+            <div class="grid grid-cols-1 gap-12 pt-0 ">
                 <div>
                     <div class="flex items-center justify-center">
                         <span
@@ -986,15 +986,25 @@
                     </div>
 
                 </div>
-            </div> -->
+            </div> 
         </div>
-    </footer>
+    </footer> -->
+     <div id="footer"></div>
     <script src="assets/js/swiper-bundle.min.js"></script>
 
     <script src="assets/js/ScrollSmoother.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+
+         <script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(error => console.error("Footer load error:", error));
+</script>
 </body>
 
 </html>
