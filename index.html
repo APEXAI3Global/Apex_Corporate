@@ -1475,23 +1475,19 @@
 
                 <!-- RIGHT SIDE -->
                 <div class="lg:w-1/2">
-                    <form id="enquiryForm" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <!-- <form id="enquiryForm" action="mailto:vijayakarthik13@gmail.com" class="grid grid-cols-1 gap-4 md:grid-cols-2"> -->
+<form id="enquiryForm"  method="POST" class="grid grid-cols-1 gap-4 md:grid-cols-2">
 
-                        <input type="text" name="firstName" placeholder="First Name" required
-                            class="px-4 py-3 text-white border rounded-lg bg-white/10 border-white/20 placeholder:text-white/50">
+                        <input type="text" name="firstName" placeholder="First Name" required="" class="px-4 py-3 text-white border rounded-lg bg-white/10 border-white/20 placeholder:text-white/50">
 
-                        <input type="text" name="lastName" placeholder="Last Name" required
-                            class="px-4 py-3 text-white border rounded-lg bg-white/10 border-white/20 placeholder:text-white/50">
+                        <input type="text" name="lastName" placeholder="Last Name" required="" class="px-4 py-3 text-white border rounded-lg bg-white/10 border-white/20 placeholder:text-white/50">
 
-                        <input type="email" name="email" placeholder="Work Email" required
-                            class="px-4 py-3 text-white border rounded-lg md:col-span-2 bg-white/10 border-white/20 placeholder:text-white/50">
+                        <input type="email" name="email" placeholder="Work Email" required="" class="px-4 py-3 text-white border rounded-lg md:col-span-2 bg-white/10 border-white/20 placeholder:text-white/50">
 
-                        <textarea name="message" placeholder="How can we help?" rows="3" required
-                            class="px-4 py-3 text-white border rounded-lg md:col-span-2 bg-white/10 border-white/20 placeholder:text-white/50"></textarea>
+                        <textarea name="message" placeholder="How can we help?" rows="3" required="" class="px-4 py-3 text-white border rounded-lg md:col-span-2 bg-white/10 border-white/20 placeholder:text-white/50"></textarea>
 
                         <div class="lg:hidden md:col-span-2">
-                            <button type="submit"
-                                class="w-full font-bold px-5 py-3 text-lg text-[var(--primary)] bg-white rounded-md shadow-2xl cursor-pointer">
+                            <button type="submit" onclick="console.log('form clicked')" class="w-full font-bold px-5 py-3 text-lg text-[var(--primary)] bg-white rounded-md shadow-2xl cursor-pointer">
                                 Enquire Now
                             </button>
                         </div>
